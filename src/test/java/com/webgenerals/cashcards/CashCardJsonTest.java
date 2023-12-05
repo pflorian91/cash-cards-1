@@ -1,6 +1,6 @@
-package com.webgenerals.springacademy;
+package com.webgenerals.cashcards;
 
-import com.webgenerals.springacademy.domain.CashCard;
+import com.webgenerals.cashcards.domain.CashCard;
 import org.assertj.core.util.Arrays;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

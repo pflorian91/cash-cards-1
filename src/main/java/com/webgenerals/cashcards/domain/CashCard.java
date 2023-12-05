@@ -1,4 +1,4 @@
-package com.webgenerals.springacademy.domain;
+package com.webgenerals.cashcards.domain;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

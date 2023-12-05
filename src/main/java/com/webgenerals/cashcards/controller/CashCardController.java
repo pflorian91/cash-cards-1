@@ -1,7 +1,7 @@
-package com.webgenerals.springacademy.controller;
+package com.webgenerals.cashcards.controller;
 
-import com.webgenerals.springacademy.domain.CashCard;
-import com.webgenerals.springacademy.repository.CashCardRepository;
+import com.webgenerals.cashcards.domain.CashCard;
+import com.webgenerals.cashcards.repository.CashCardRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -14,7 +14,6 @@ import org.springframework.web.util.UriComponentsBuilder;
 import java.net.URI;
 import java.security.Principal;
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/cashcards")
@@ -22,6 +21,16 @@ public class CashCardController {
 
 	@Autowired
 	private CashCardRepository cashCardRepository;
+
+	@DeleteMapping("/{id}")
+	private ResponseEntity<Void> deleteCashCard(@PathVariable Long id, Principal principal) {
+		if (cashCardRepository.existsByIdAndOwner(id, principal.getName())) {
+			cashCardRepository.deleteById(id);
+			return ResponseEntity.noContent().build();
+		}
+
+		return ResponseEntity.notFound().build();
+	}
 
 	@GetMapping
 	public ResponseEntity<List<CashCard>> findAll(Pageable pageable, Principal principal) {

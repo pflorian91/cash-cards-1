@@ -1,13 +1,13 @@
-package com.webgenerals.springacademy;
+package com.webgenerals.cashcards;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringAcademyApplication {
+public class CashCardsApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringAcademyApplication.class, args);
+		SpringApplication.run(CashCardsApplication.class, args);
 	}
 
 }

@@ -6,14 +6,14 @@
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
     <version>3.1.5</version>
-    <relativePath/> <!-- lookup parent from repository -->
+    <relativePath/>
   </parent>
 
   <groupId>com.webgenerals</groupId>
-  <artifactId>spring-academy-playground</artifactId>
+  <artifactId>cash-cards</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>spring-academy-playground</name>
-  <description>Spring academy playground</description>
+  <name>Cash Cards</name>
+  <description>Cash cards</description>
 
   <properties>
     <java.version>17</java.version>
